@@ -10,29 +10,27 @@ class Main {
 
             if (string.equals("T1004, T1005")) {
 
+//добавить текущий элемент массива, а не подстроку в строке, не усложнять задачу
 
-                result.add("T1005")
-                result.add("T1004")
-                result.add("T1008")
-                result.add("T1004")
-                result.add("T1005")
+                for (task in array) {
 
+                    if (task.equals("T1004, T1005")) result.add(task)
+                    if (task.contains("T1008")) result.add(task)
+
+
+                }
+
+                if (string.equals("T1006")) {
+
+
+
+                }
             }
-
-            if (string.equals("T1006")) {
-
-                result.add("T1004")
-                result.add("T1006")
-                result.add("T1007")
-                result.add("T1006")
-                result.add("T1001")
-
-            }
-
             return result
-        }
-    }
 
+        }
+
+    }
 
 }
 
