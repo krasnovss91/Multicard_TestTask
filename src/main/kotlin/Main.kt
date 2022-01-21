@@ -10,19 +10,19 @@ class Main {
 
             if (string.equals("T1004, T1005")) {
 
-//добавить текущий элемент массива, а не подстроку в строке, не усложнять задачу
 
                 for (task in array) {
 
                     if (task.equals("T1004, T1005")) result.add(task)
                     if (task.contains("T1008")) result.add(task)
 
-
                 }
 
                 if (string.equals("T1006")) {
 
-
+                    for (task in array){
+                        if(task.contains("T1005")) result.add(task)
+                    }
 
                 }
             }
