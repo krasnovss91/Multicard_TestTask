@@ -13,7 +13,6 @@ class Main {
 
             if (string.equals("T1004, T1005")) {
 
-
                 for (task in array) {
 
                     if (task.equals("T1004, T1005")) result.add(task)
@@ -55,5 +54,5 @@ fun main(args: Array<String>) {
     writer.writeNext(arrayOf(record2))
     writer.close()
 
-
+//добавить junit-тесты. зависимость gradle junit-jupiter-api
 }
