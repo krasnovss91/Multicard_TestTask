@@ -54,5 +54,4 @@ fun main(args: Array<String>) {
     writer.writeNext(arrayOf(record2))
     writer.close()
 
-//добавить junit-тесты. зависимость gradle junit-jupiter-api
 }
