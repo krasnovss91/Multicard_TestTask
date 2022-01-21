@@ -1,4 +1,7 @@
 import Main.Companion.getResultList
+import com.opencsv.CSVWriter
+import java.io.FileWriter
+
 
 class Main {
 
@@ -35,6 +38,9 @@ class Main {
 }
 
 fun main(args: Array<String>) {
+    val csv = "data.csv"
+    val writer = CSVWriter(FileWriter(csv))
+
     val tasks1 = "T1001, T1002, T1003"
     val tasks2 = "T1004, T1005"
     val tasks3 = "T1006"
@@ -42,7 +48,12 @@ fun main(args: Array<String>) {
 
     val tasksArray = arrayOf(tasks1, tasks2, tasks3, tasks4)
 
-    println(getResultList(tasks2, tasksArray))
-    println(getResultList(tasks3, tasksArray))
+    val record1 = getResultList(tasks2, tasksArray).toString()
+    val record2 = getResultList(tasks3, tasksArray).toString()
+
+    writer.writeNext(arrayOf(record1))
+    writer.writeNext(arrayOf(record2))
+    writer.close()
+
 
 }
