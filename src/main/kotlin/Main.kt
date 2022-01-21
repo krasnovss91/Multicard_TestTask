@@ -40,15 +40,13 @@ fun main(args: Array<String>) {
     val csv = "data.csv"
     val writer = CSVWriter(FileWriter(csv))
 
-    val tasks1 = "T1001, T1002, T1003"
-    val tasks2 = "T1004, T1005"
-    val tasks3 = "T1006"
-    val tasks4 = "T1007, T1008, T1009"
+    val tasks1 = readLine().toString()
+    val tasks2 = readLine().toString()
 
-    val tasksArray = arrayOf(tasks1, tasks2, tasks3, tasks4)
+    val tasksArray = arrayOf(tasks1,tasks2)
 
-    val record1 = getResultList(tasks2, tasksArray).toString()
-    val record2 = getResultList(tasks3, tasksArray).toString()
+    val record1 = getResultList(tasks1, tasksArray).toString()
+    val record2 = getResultList(tasks2, tasksArray).toString()
 
     writer.writeNext(arrayOf(record1))
     writer.writeNext(arrayOf(record2))
